@@ -4,42 +4,22 @@ html {
 
 body {
   background-image: url("imagens/Bairro\ da\ Juventude\ -\ Padrão\ \(rgb\)_1\ cópia.png");
+  background-attachment: fixed;
   margin: 0;
   font-family: 'Outfit', Tahoma, Geneva, Verdana, sans-serif;
   background-color: #f4f4f4;
   color: #333;
-}
-
-nav {
-  background-color: #1CAAD9;
-  padding: 0.5rem 1rem;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-}
-
-nav ul {
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
-  margin: 0;
-  padding: 0;
-}
-
-nav a {
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-nav a:hover {
-  text-decoration: underline;
+  padding-top: 13rem;
 }
 
 header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 8rem;
   text-align: center;
+  z-index: 1000;
   padding: 3rem 1rem 1rem;
   background-color: #ffffff;
   border-bottom: 15px solid transparent;
@@ -51,10 +31,48 @@ header h1 {
   font-size: 2.5rem;
 }
 
-header p {
-  font-size: 1.2rem;
-  color: #777;
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
 }
+
+nav li {
+  padding: 0.5rem;
+}
+
+nav a {
+  text-decoration: none;
+  font-size: 1.5rem;
+  color: #333;
+  transition: 0.3s;
+}
+
+
+nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 1px; /* distância da linha */
+  width: 100%;
+  height: 2px;
+  background: currentColor;
+
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+nav a:hover::after {
+  transform: scaleX(1);
+}
+
+nav a:hover {
+  transform: scale(1.1);
+}
+
+
 
 .container {
   display: flex;
@@ -199,4 +217,10 @@ footer {
   background-color: #ffffff;
   border-top: 15px solid transparent;
   border-image: url("imagens/Captura\ de\ tela\ 2026-05-12\ 174048.png") 30 round;
+}
+
+#projeto,
+#gameplay,
+#galeria {
+  scroll-margin-top: 15rem;
 }
