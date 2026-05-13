@@ -4,6 +4,7 @@ html {
 
 body {
   background-image: url("imagens/Bairro\ da\ Juventude\ -\ Padrão\ \(rgb\)_1\ cópia.png");
+  background-attachment: fixed;
   margin: 0;
   font-family: 'Outfit', Tahoma, Geneva, Verdana, sans-serif;
   background-color: #f4f4f4;
